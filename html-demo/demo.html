@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+  👋 Hi! This is an HTML COMMENT. The browser ignores it.
+  Right-click the page → "View Page Source" to see all the code behind it.
+  Every section below demos one basic HTML skill. Try changing things and refreshing!
+-->
+<html lang="en">
+
+<head>
+  <!-- The <head> holds info ABOUT the page. None of it shows up in the page body. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cat Website 🐱</title> <!-- this text appears in the browser tab! -->
+
+  <!-- A tiny bit of CSS so the page is readable. CSS = styling. We'll learn it soon! -->
+  <style>
+    body { font-family: sans-serif; max-width: 760px; margin: 0 auto; padding: 16px; line-height: 1.5;  }
+    section { border-top: 2px dashed rgb(0, 255, 0); padding: 12px 0 20px; }
+    table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px 10px; }
+    img { max-width: 100%; }
+    code { background: rgb(206, 255, 206); padding: 1px 4px; }
+  </style>
+</head>
+
+<body>
+  <!-- Everything inside <body> is what you SEE on the page. -->
+
+  <!-- ===================== 1. HEADER ===================== -->
+  <header>
+    <h1>Welcome to The Cat Website</h1>
+    <p>A very serious website about basic HTML taught by serious cats!</p>
+    <img src="cat-smile.gif" alt="A smiling cat" width="150">
+  </header>
+
+  <!-- ===================== 2. NAV (links to parts of THIS page) ===================== -->
+  <!-- href="#something" jumps to the element with id="something" -->
+  <nav>
+    <strong>Jump to:</strong>
+    <a href="#headings">Headings</a> |
+    <a href="#text">Text</a> |
+    <a href="#images">Images</a> |
+    <a href="#lists">Lists</a> |
+    <a href="#table">Table</a> |
+    <a href="#links">Links</a> |
+    <a href="#form">Form</a>
+  </nav>
+
+  <main>
+
+    <!-- ===================== 3. HEADINGS ===================== -->
+    <section id="headings">
+      <h2>1. Headings: h1 → h6</h2>
+      <p>Headings go from most important (<code>&lt;h1&gt;</code>) to least important (<code>&lt;h6&gt;</code>).</p>
+      <h1>h1: THE BIGGEST CAT</h1>
+      <h2>h2: a large cat</h2>
+      <h3>h3: a medium cat</h3>
+      <h4>h4: a small cat</h4>
+      <h5>h5: a kitten</h5>
+      <h6>h6: a very tiny kitten</h6>
+    </section>
+
+    <!-- ===================== 4. TEXT FORMATTING ===================== -->
+    <section id="text">
+      <h2>2. Paragraphs &amp; Text</h2>
+
+      <!-- <p> makes a paragraph. Extra spaces and line breaks in your code are IGNORED... -->
+      <p>
+        Cats sleep for        12 to 16 hours a day.
+        This line break in the code        does nothing!
+      </p>
+
+      <!-- ...so use <br> to force a line break -->
+      <p>Roses are red,<br>
+        Cats knock things off tables,<br>
+        I wrote this in HTML,<br>
+        Because I am able.</p>
+
+      <p>You can make text <strong>strong (bold)</strong>, <em>emphasized (italic)</em>,
+        <mark>highlighted</mark>, <del>deleted</del>, <small>small</small>,
+        H<sub>2</sub>O (subscript) and E = mc<sup>2</sup> (superscript).</p>
+
+      <blockquote>“Meow.” — A cat, probably</blockquote>
+
+      <hr> <!-- <hr> draws a horizontal line -->
+
+      <p>Special characters need codes: &lt; &gt; &amp; &copy; &hearts;</p>
+    </section>
+
+    <!-- ===================== 5. IMAGES ===================== -->
+    <section id="images">
+      <h2>3. Images</h2>
+      <p><code>&lt;img&gt;</code> needs a <code>src</code> (which file) and an <code>alt</code> (a description for screen readers, and for when the image breaks).</p>
+
+      <img src="standing-cat.png" alt="A cat standing up on two legs" width="220">
+      <img src="cat-dance.gif" alt="A cat dancing" width="220">
+      <img src="cat-cool-dance.gif" alt="A cool cat dancing" width="220">
+
+      <!-- <figure> + <figcaption> = an image with a caption -->
+      <figure>
+        <img src="cat-nap.gif" alt="A cat taking a nap" width="300">
+        <figcaption>Fig. 1: A cat doing its main job.</figcaption>
+      </figure>
+
+      <!-- What happens when src is wrong? You see the alt text instead! -->
+      <p>Oops, a broken image (the file doesn't exist), so you see its alt text:</p>
+      <img src="invisible-cat.gif" alt="🙀 This is an invisible cat (broken image!)">
+    </section>
+
+    <!-- ===================== 6. LISTS ===================== -->
+    <section id="lists">
+      <h2>4. Lists</h2>
+
+      <h3>Unordered list <code>&lt;ul&gt;</code> (bullets)</h3>
+      <ul>
+        <li>Naps</li>
+        <li>Boxes</li>
+        <li>Knocking cups off tables</li>
+      </ul>
+
+      <h3>Ordered list <code>&lt;ol&gt;</code> (numbers)</h3>
+      <ol>
+        <li>Wake up at 4am</li>
+        <li>Scream for breakfast</li>
+        <li>Eat breakfast</li>
+        <li>Go back to sleep</li>
+      </ol>
+
+      <h3>Nested list (a list inside a list)</h3>
+      <ul>
+        <li>Cat moods
+          <ul>
+            <li>Sleepy</li>
+            <li>Dancy</li>
+            <li>Chaotic</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== 7. TABLE ===================== -->
+    <section id="table">
+      <h2>5. Tables</h2>
+      <!-- <tr> = table row, <th> = header cell, <td> = data cell -->
+      <table>
+        <tr>
+          <th>Cat</th>
+          <th>Mood</th>
+          <th>Dance skill (1–10)</th>
+        </tr>
+        <tr>
+          <td><img src="happy-cat.gif" alt="Happy cat" width="60"></td>
+          <td>Happy</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td><img src="cat-cool-dance.gif" alt="Cool dancing cat" width="60"></td>
+          <td>Cool</td>
+          <td>11 (off the charts)</td>
+        </tr>
+        <tr>
+          <td><img src="cat-nap.gif" alt="Napping cat" width="60"></td>
+          <td>Asleep</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ===================== 8. LINKS ===================== -->
+    <section id="links">
+      <h2>6. Links</h2>
+      <!-- <a href="..."> makes a link. target="_blank" opens it in a new tab. -->
+      <p>Link to another website:
+        <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">Wikipedia's Cat page</a></p>
+
+      <p>Link to a file in the same folder:
+        <a href="happy-cat.gif">open happy-cat.gif</a></p>
+
+      <p>An image can BE a link. Click the cat to go back to the top!<br>
+        <a href="#headings"><img src="happy-cat.gif" alt="Happy cat — click to go to the top" width="120"></a></p>
+
+      <p>Email link: <a href="mailto:cat@example.com">email the cat</a></p>
+    </section>
+
+    <!-- ===================== 9. FORM ===================== -->
+    <section id="form">
+      <h2>7. Forms &amp; Inputs</h2>
+      <p>Forms let people type and choose things. (This one doesn't send anywhere — it's just for show!)</p>
+      <form>
+        <!-- <label for="x"> connects to <input id="x"> — click the label and the box activates -->
+        <label for="catname">Your cat's name:</label>
+        <input type="text" id="catname" placeholder="e.g. Sir Fluffington"><br><br>
+
+        <label for="age">Cat age:</label>
+        <input type="number" id="age" min="0" max="30"><br><br>
+
+        <p>Favorite activity:</p>
+        <input type="radio" id="nap" name="activity"><label for="nap">Napping</label>
+        <input type="radio" id="dance" name="activity"><label for="dance">Dancing</label>
+        <input type="radio" id="chaos" name="activity"><label for="chaos">Chaos</label>
+
+        <p>Snacks your cat likes:</p>
+        <input type="checkbox" id="fish"><label for="fish">Fish</label>
+        <input type="checkbox" id="chicken"><label for="chicken">Chicken</label>
+        <input type="checkbox" id="plants"><label for="plants">Your houseplants</label><br><br>
+
+        <label for="color">Fur color:</label>
+        <select id="color">
+          <option>Orange</option>
+          <option>Black</option>
+          <option>White</option>
+          <option>Tuxedo</option>
+        </select><br><br>
+
+        <label for="story">Tell us a cat story:</label><br>
+        <textarea id="story" rows="3" cols="40"></textarea><br><br>
+
+        <button type="button">Meow! (submit)</button>
+      </form>
+    </section>
+
+    <!-- ===================== 10. BONUS ===================== -->
+    <section>
+      <h2>Bonus: a secret (no JavaScript needed!)</h2>
+      <!-- <details> + <summary> = a click-to-open box, built into HTML -->
+      <details>
+        <summary>Click to reveal what the cat is really doing</summary>
+        <img src="cat-dance.gif" alt="A secretly dancing cat" width="200">
+        <p>Dancing! Dancing even when the world is burning.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <hr>
+    <p>&copy; 2026 The Cat Website · Made with HTML &hearts; in IML 300</p>
+  </footer>
+
+</body>
+
+</html>
